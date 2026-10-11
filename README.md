@@ -7,7 +7,6 @@ A sophisticated multi-agent system for intelligent data processing and analysis 
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Features](#features)
-- [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -95,15 +94,6 @@ The system follows a hierarchical agent architecture:
   - Protection against database modifications (INSERT, UPDATE, DELETE, DROP, etc.)
   - Input validation and sanitization
   - Structured output validation using Pydantic
-
----
-
-## 📦 Prerequisites
-
-- Python 3.12+
-- PostgreSQL database (for SQL operations)
-- API keys for LLM providers (Claude and/or OpenAI)
-- Virtual environment (recommended)
 
 ---
 
