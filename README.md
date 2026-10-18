@@ -127,6 +127,7 @@ Data_Agent/
 │   └── vehicles.csv                 # Sample dataset
 │
 ├── main.py                          # Entry point
+├── app.py                           # streamlit code
 ├── feed_db.py                       # Database initialization script
 ├── pyproject.toml                   # Project metadata and dependencies
 └── README.md                         # This file
@@ -232,6 +233,9 @@ python agents/etl_analyst.py
 - **Conditional Routing**: Routes to SQL or ETL based on classification
 - **Graph Orchestration**: Manages workflow using LangGraph
 
+**Workflow**
+<img width="1335" height="802" alt="image" src="https://github.com/user-attachments/assets/3c75ebda-65aa-44e1-a154-b06de96d069f" />
+
 ---
 
 ### 2. **SQL Analyst Agent**
@@ -251,6 +255,9 @@ python agents/etl_analyst.py
 5. **Safety Check** - Validates query safety
 6. **Query Execution** - Executes validated query on database
 7. **Answer Generation** - Formats and returns results
+
+<img width="1393" height="526" alt="image" src="https://github.com/user-attachments/assets/144cbee7-dd34-408e-911d-a144164d1d67" />
+
 
 **Safety Features:**
 - Prevents execution of dangerous commands (INSERT, UPDATE, DELETE, DROP, ALTER)
@@ -276,6 +283,8 @@ python agents/etl_analyst.py
 4. **Code Generation** - Generates Pandas code for transformation
 5. **Safe Execution** - Executes generated code in sandboxed environment
 6. **Result Reporting** - Returns execution status and generated code
+
+<img width="1288" height="892" alt="image" src="https://github.com/user-attachments/assets/01560146-219f-4740-8002-2724eacd4e9d" />
 
 **Supported Tools:**
 - **extract_load_tool**: Extract from API → Load to storage
@@ -373,6 +382,48 @@ class DataAgentSchema(BaseModel):
 3. Generates Pandas code to filter and transform
 4. Executes code safely
 5. Saves result to `data/transform/` in JSON format
+
+---
+
+## 📚 Streamlit Screenshots
+
+**Overview Tab**
+
+<img width="1899" height="835" alt="image" src="https://github.com/user-attachments/assets/9320c6d0-1c1c-47a3-b0fc-72b54e68038d" />
+
+**Workflow Tab**
+<img width="1807" height="819" alt="image" src="https://github.com/user-attachments/assets/eb725f99-95e8-418b-b164-6cd70789c485" />
+
+**Ask Tab**
+<img width="1877" height="762" alt="image" src="https://github.com/user-attachments/assets/5f6c4398-2864-4f12-92dc-10d249578b13" />
+
+**Question 1**
+```
+"Delete data from users table"
+```
+<img width="1784" height="405" alt="image" src="https://github.com/user-attachments/assets/73f1bc6f-14fc-41ab-9375-32a2be73c3e2" />
+
+**Workflow changes based on the Questions**
+<img width="1427" height="861" alt="image" src="https://github.com/user-attachments/assets/958e62a6-5580-42dd-afcf-a8129dbb7672" />
+
+
+**Question 2**
+```
+"Show the first 10 payment records."
+```
+
+<img width="1354" height="690" alt="image" src="https://github.com/user-attachments/assets/7d59a3dd-b883-4c65-84fe-5d37d8edd0f8" />
+
+**Question 3**:
+```
+"Transform the data and show squirtle pokemon only"
+```
+
+<img width="1820" height="457" alt="image" src="https://github.com/user-attachments/assets/99bebbd6-d10a-4e08-8bd8-ee2f31fe1add" />
+
+**Workflow changes based on the Questions**
+
+<img width="1582" height="593" alt="image" src="https://github.com/user-attachments/assets/7ba8f0b0-9221-4c23-86ff-b58d6050b9c2" />
 
 ---
 
